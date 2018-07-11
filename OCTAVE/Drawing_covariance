@@ -1,0 +1,8 @@
+ K = [2.33 0.99; 0.99 0.499];
+ L = chol(K,'lower');
+ u = randn(1e3,2)*L';
+ plot(u(:,1),u(:,2),'.r');
+ hold on;
+ drawEllipse(elli,'linewidth',2);
+ hold off
+ axis tight
